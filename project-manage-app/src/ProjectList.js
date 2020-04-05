@@ -2,18 +2,22 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
+
+
 const Project = (props) => (
   <tr>
     <td>{props.project.Name}</td>
     <td>{props.project.Description}</td>
     <td>{props.project.Member}</td>
     <td>
-      <Link to={"/project/add-member/" + props.project._id}>Add Member</Link>
+      <Link to={`/project/${props.project._id}/add-member/` }>Add Member</Link>
     </td>
   </tr>
 );
 
 export default class ProjectList extends Component {
+
+  
   constructor(props) {
     super(props);
 
